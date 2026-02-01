@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SHOP</title>
+        <style>
+            body{
+                font-family: Arial, sans-serif;
+                background-color: rgb(255, 255, 255);
+            }
+           .card {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+           .container{
+            padding: 30px;
+            color: rgb(2, 2, 2);
+            border: 2px solid #b4b1b1;
+            max-width: 150px;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            border-radius: 15px;
+           }
+           .container:hover{
+            box-shadow: 0 20px 16px 0 rgba(0,0,0,0.2);
+            transition-duration: 600ms;
+           }
+           .button{
+            background-color: rgb(70, 70, 219);
+            color: whitesmoke;
+            text-decoration: none;
+            border-radius: 10px;
+            margin-bottom: 6px;
+           }
+           h4{
+            font-size: 20px;
+            
+           }
+
+           .headershop{
+            text-align: center;
+            background-color: rgb(70, 70, 219);
+            color: whitesmoke;
+            padding: 15px;
+            border-radius: 0 0 15px 15px;
+           }
+           .controls{
+            text-align: center;
+           }
+        </style>
+    </head>
+    <body>
+        <div class="headershop">
+    <h1>Welcome to the SHOP</h1> </div>
+
+
+    <div class="controls">
+        <select id="categoryFilter" onchange="updateUI()">
+            <option value="all">All Categories</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Home">Home</option>
+            <option value="Accessories">Accessories</option>
+        </select>
+
+        <select id="sortOptions" onchange="updateUI()">
+            <option value="default">Sort By...</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="name-asc">Name: A-Z</option>
+            <option value="name-desc">Name: Z-A</option>
+            <option value="rating-high">Top Rated</option>
+        </select>
+    </div>
+
+    <div class="card" id="product-grid"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
